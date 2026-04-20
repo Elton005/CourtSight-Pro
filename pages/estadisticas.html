@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Estadísticas • CourtSight Tennis</title>
+    <meta name="description" content="Rendimiento histórico, yield y análisis de escenarios de apuesta">
+    <meta name="theme-color" content="#0a0e14">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../pictures/logo.png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/estadisticas.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+</head>
+<body class="pro-circuit-dark page-estadisticas">
+    
+    <!-- HEADER -->
+    <header class="header header-estadisticas">
+        <div class="header-content">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <a href="../index.html" class="logo-link" aria-label="Ir al inicio">
+                <img src="../pictures/logo.png" alt="CourtSight" class="logo-img" width="36" height="36" loading="lazy">
+                <h1 class="logo-text">COURTSIGHT <span class="logo-pro">PRO</span></h1>
+            </a>
+            <div id="connection-status" class="connection-status" role="status" aria-live="polite">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span class="status-text">Offline</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Overlay móvil -->
+    <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+    
+    <!-- LAYOUT PRINCIPAL -->
+    <div class="app-layout">
+        
+        <!-- SIDEBAR -->
+        <aside id="sidebar" class="sidebar" aria-label="Navegación principal">
+            <nav class="sidebar-menu" role="navigation">
+                <a href="../index.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+                    <span>Inicio</span>
+                </a>
+                <a href="pronosticos.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-binoculars"></i></span>
+                    <span>Pronósticos</span>
+                </a>
+                <a href="simulador.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-table-tennis"></i></span>
+                    <span>Simulador</span>
+                </a>
+                <a href="ranking-elo.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                    <span>Ranking ELO</span>
+                </a>
+                <a href="ranking-atp.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-trophy"></i></span>
+                    <span>Ranking ATP</span>
+                </a>
+                <a href="biblioteca.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-book"></i></span>
+                    <span>Biblioteca</span>
+                </a>
+                <a href="estadisticas.html" class="sidebar-item active" aria-current="page">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-chart-pie"></i></span>
+                    <span>Estadísticas</span>
+                </a>
+                <a href="soporte.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-headset"></i></span>
+                    <span>Soporte</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-status">
+                    <span class="status-indicator online" aria-hidden="true"></span>
+                    <span class="status-label">Sesión activa</span>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content main-estadisticas" role="main">
+            
+            <!-- HEADER DE SECCIÓN -->
+            <section class="section-header">
+                <div class="section-title-wrapper">
+                    <h2 class="section-title">
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
+                        <span class="title-text">Estadísticas</span>
+                    </h2>
+                    <p class="section-subtitle">Rendimiento histórico, yield y análisis por escenario de apuesta</p>
+                </div>
+            </section>
+
+            <!-- 🔹 KPIs PRINCIPALES -->
+            <div class="kpi-grid" role="list" aria-label="Indicadores clave de rendimiento">
+                <div class="kpi-card kpi-bank" role="listitem">
+                    <div class="kpi-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Bank Actual</span>
+                        <strong class="kpi-value mono" id="kpi-bank">2.000€</strong>
+                        <span class="kpi-delta positive" id="kpi-bank-delta">+0€</span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card kpi-yield" role="listitem">
+                    <div class="kpi-icon"><i class="fas fa-percent"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Yield General</span>
+                        <strong class="kpi-value mono" id="kpi-yield">0.0%</strong>
+                        <span class="kpi-delta" id="kpi-yield-delta">—</span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card kpi-winrate" role="listitem">
+                    <div class="kpi-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Win Rate</span>
+                        <strong class="kpi-value mono" id="kpi-winrate">—%</strong>
+                        <span class="kpi-sub" id="kpi-winrate-detail">0/0 aciertos</span>
+                    </div>
+                </div>
+                
+                <div class="kpi-card kpi-roi" role="listitem">
+                    <div class="kpi-icon"><i class="fas fa-coins"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">ROI Total</span>
+                        <strong class="kpi-value mono" id="kpi-roi">0.0%</strong>
+                        <span class="kpi-sub" id="kpi-roi-detail">0€ invertidos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 🔹 GRÁFICO PRINCIPAL: EVOLUCIÓN DE BANK -->
+            <section class="chart-section">
+                <div class="chart-header">
+                    <h3 class="chart-title"><i class="fas fa-line-chart"></i> Evolución del Bank</h3>
+                    <div class="chart-legend">
+                        <span class="legend-item"><span class="legend-dot bank-dot"></span> Bank acumulado</span>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <canvas id="bank-evolution-chart" aria-label="Gráfico de evolución del bank"></canvas>
+                    <div id="chart-empty" class="chart-empty hidden">
+                        <i class="fas fa-chart-area"></i>
+                        <p>Sin datos históricos disponibles</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 🔹 GRÁFICOS POR ESCENARIO -->
+            <section class="scenarios-grid">
+                
+                <!-- Validaciones de Mercado -->
+                <div class="scenario-card scenario-validacion">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="scenario-info">
+                            <h4 class="scenario-title">Validaciones de Mercado</h4>
+                            <p class="scenario-desc">ELO y mercado coinciden en el favorito</p>
+                        </div>
+                        <span class="scenario-stake">Stake: 200€</span>
+                    </div>
+                    
+                    <div class="scenario-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Yield</span>
+                            <strong class="stat-value mono" id="val-yield">0.0%</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Win Rate</span>
+                            <strong class="stat-value mono" id="val-winrate">—%</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Beneficio</span>
+                            <strong class="stat-value mono" id="val-profit">0€</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-chart">
+                        <canvas id="chart-validaciones" aria-label="Gráfico de validaciones"></canvas>
+                    </div>
+                </div>
+
+                <!-- Inversiones de Mercado -->
+                <div class="scenario-card scenario-inversion">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="scenario-info">
+                            <h4 class="scenario-title">Inversiones de Mercado</h4>
+                            <p class="scenario-desc">El mercado favorece al no-favorito ELO</p>
+                        </div>
+                        <span class="scenario-stake">Stake: 100€</span>
+                    </div>
+                    
+                    <div class="scenario-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Yield</span>
+                            <strong class="stat-value mono" id="inv-yield">0.0%</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Win Rate</span>
+                            <strong class="stat-value mono" id="inv-winrate">—%</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Beneficio</span>
+                            <strong class="stat-value mono" id="inv-profit">0€</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-chart">
+                        <canvas id="chart-inversiones" aria-label="Gráfico de inversiones"></canvas>
+                    </div>
+                </div>
+
+                <!-- Discrepancias -->
+                <div class="scenario-card scenario-discrepancia">
+                    <div class="scenario-header">
+                        <div class="scenario-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <div class="scenario-info">
+                            <h4 class="scenario-title">Discrepancias</h4>
+                            <p class="scenario-desc">Diferencia significativa ELO vs mercado</p>
+                        </div>
+                        <span class="scenario-stake">Stake: 100€ @1.45</span>
+                    </div>
+                    
+                    <div class="scenario-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Yield</span>
+                            <strong class="stat-value mono" id="disc-yield">0.0%</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Win Rate</span>
+                            <strong class="stat-value mono" id="disc-winrate">—%</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Beneficio</span>
+                            <strong class="stat-value mono" id="disc-profit">0€</strong>
+                        </div>
+                    </div>
+                    
+                    <div class="scenario-chart">
+                        <canvas id="chart-discrepancias" aria-label="Gráfico de discrepancias"></canvas>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 🔹 TABLA RESUMEN -->
+            <section class="summary-section">
+                <h3 class="section-subtitle"><i class="fas fa-table"></i> Resumen por Escenario</h3>
+                <div class="table-responsive">
+                    <table class="summary-table" role="table" aria-label="Resumen de rendimiento por tipo de apuesta">
+                        <thead>
+                            <tr>
+                                <th scope="col">Escenario</th>
+                                <th scope="col">Apuestas</th>
+                                <th scope="col">Aciertos</th>
+                                <th scope="col">Win Rate</th>
+                                <th scope="col">Stake Total</th>
+                                <th scope="col">Retorno</th>
+                                <th scope="col">Beneficio</th>
+                                <th scope="col">Yield</th>
+                            </tr>
+                        </thead>
+                        <tbody id="summary-body">
+                            <!-- Se llena dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ESTADO: SIN DATOS -->
+            <div id="no-data-state" class="state-container hidden" role="alert">
+                <div class="state-icon"><i class="fas fa-inbox"></i></div>
+                <h3>Sin datos históricos</h3>
+                <p>Los resultados de tus pronósticos aparecerán aquí una vez que completes partidos con resultado conocido.</p>
+                <a href="pronosticos.html" class="btn-cta">
+                    <i class="fas fa-binoculars"></i> Ver Pronósticos
+                </a>
+            </div>
+            
+        </main>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="info-bar footer-estadisticas">
+        <p class="info-text">CourtSight Tennis <span class="version-badge">v1.0.0</span></p>
+        <a href="https://t.me/CourtSight" class="telegram-contact" target="_blank" rel="noopener noreferrer">
+            <span class="telegram-icon"><i class="fab fa-telegram-plane" aria-hidden="true"></i></span>
+            <span>Únete al canal</span>
+        </a>
+        <p class="version-text">100% Offline • Sin límites</p>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/estadisticas.js"></script>
+</body>
+</html>

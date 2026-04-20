@@ -1,0 +1,383 @@
+/* ============================================
+🎾 COURT SIGHT TENNIS - SIMULADOR CSS
+🎨 TEMA: PRO CIRCUIT DARK (Tenis Premium Nocturno)
+📦 VERSIÓN: 1.0 - Pestañas + Módulos En Desarrollo
+============================================ */
+
+/* ============================================
+🔹 BASE & HEADER
+============================================ */
+.page-simulador {
+    background: var(--bg-primary);
+}
+
+.main-simulador {
+    padding: 1.5rem 1rem 2rem;
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    min-height: calc(100vh - 140px);
+}
+
+@media (min-width: 1024px) {
+    .main-simulador {
+        padding: 2rem 2.5rem;
+        margin-left: 260px;
+    }
+}
+
+.header-simulador {
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+🔹 SECCIÓN HEADER
+============================================ */
+.section-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.section-title i { color: var(--accent); font-size: 1.3rem; }
+
+.section-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+/* ============================================
+🔹 PESTAÑAS (TABS)
+============================================ */
+.sim-tabs-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.sim-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 0.5rem;
+    width: fit-content;
+    box-shadow: var(--shadow-sm);
+}
+
+.sim-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.sim-tab:hover {
+    color: var(--text-primary);
+    background: rgba(255,255,255,0.04);
+}
+
+.sim-tab.active {
+    background: var(--accent-dim);
+    color: var(--text-primary);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+
+.sim-tab.active i { color: var(--accent); }
+
+.tab-status {
+    font-size: 0.65rem;
+    background: var(--bg-primary);
+    color: var(--text-muted);
+    padding: 0.15rem 0.4rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    border: 1px solid var(--border);
+}
+
+.sim-tab.active .tab-status {
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-color: var(--accent);
+    font-weight: 700;
+}
+
+/* ============================================
+🔹 PANELES Y TARJETAS EN DESARROLLO
+============================================ */
+.sim-panels {
+    position: relative;
+    min-height: 400px;
+}
+
+.sim-panel {
+    display: none;
+    animation: fadeSlide 0.35s ease-out;
+}
+
+.sim-panel.active {
+    display: block;
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dev-module-card {
+    background: linear-gradient(145deg, var(--bg-card), var(--bg-secondary));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.dev-card-glow {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--accent-dim) 0%, transparent 70%);
+    opacity: 0.4;
+    pointer-events: none;
+    animation: glowPulse 6s ease-in-out infinite;
+}
+
+.custom-glow {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    left: auto;
+    right: -10%;
+    top: auto;
+    bottom: -20%;
+}
+
+@keyframes glowPulse {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.dev-card-content {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.dev-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dev-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    border: 1px solid var(--border);
+}
+
+.live-icon { background: rgba(184, 212, 50, 0.1); color: var(--accent); }
+.custom-icon { background: rgba(59, 130, 246, 0.1); color: #3b82f6; }
+
+.dev-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.live-badge { background: rgba(184, 212, 50, 0.15); color: var(--accent); border: 1px solid var(--accent); }
+.custom-badge { background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid #3b82f6; }
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+    animation: pulse 1.5s infinite;
+}
+
+.dev-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem 0;
+}
+
+.dev-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 0 1.25rem 0;
+}
+
+.dev-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.dev-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.dev-features i {
+    color: var(--accent);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.dev-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+}
+
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.65rem 1.2rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: not-allowed;
+    opacity: 0.6;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.dev-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.dev-note i { color: var(--accent); }
+
+/* ============================================
+🔹 RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+    .main-simulador { padding: 1rem 0.75rem 1.5rem; }
+    
+    .section-title { font-size: 1.3rem; }
+    .section-subtitle { font-size: 0.85rem; }
+    
+    .sim-tabs { width: 100%; flex-direction: column; }
+    .sim-tab { width: 100%; justify-content: space-between; }
+    
+    .dev-module-card { padding: 1.5rem; }
+    .dev-title { font-size: 1.2rem; }
+    .dev-desc { font-size: 0.9rem; }
+    .dev-actions { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 480px) {
+    .dev-header { flex-direction: column; align-items: flex-start; }
+    .dev-features li { font-size: 0.85rem; }
+}
+
+/* ============================================
+🔹 UTILIDADES & ACCESIBILIDAD
+============================================ */
+.visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Focus visible */
+.sim-tab:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* ============================================
+🔧 FIX: HEADER COMPACTO UNIFICADO (Igual que Pronósticos)
+============================================ */
+.header-simulador {
+    min-height: 64px !important;
+    padding: 0.6rem 1rem !important;
+    background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%) !important;
+    border-bottom: 1px solid var(--border) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Logo y texto proporcionales */
+.header-simulador .logo-img { width: 32px; height: 32px; }
+.header-simulador .logo-text { font-size: 1rem; }
+.header-simulador .logo-pro { font-size: 0.5rem; padding: 1px 4px; }
+
+/* 🔹 Sidebar y Overlay alineados exactamente debajo del header */
+.sidebar { top: 64px !important; height: calc(100vh - 64px) !important; }
+.sidebar-overlay { top: 64px !important; height: calc(100vh - 64px) !important; }
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+    .header-simulador { min-height: 60px !important; padding: 0.5rem 0.75rem !important; }
+    .sidebar { top: 60px !important; height: calc(100vh - 60px) !important; }
+    .sidebar-overlay { top: 60px !important; height: calc(100vh - 60px) !important; }
+}
+
+/* Responsive: Móvil pequeño */
+@media (max-width: 480px) {
+    .header-simulador { min-height: 56px !important; }
+    .sidebar { top: 56px !important; height: calc(100vh - 56px) !important; }
+    .sidebar-overlay { top: 56px !important; height: calc(100vh - 56px) !important; }
+}
