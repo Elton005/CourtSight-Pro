@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pronósticos • CourtSight Tennis</title>
+    <meta name="description" content="Pronósticos ATP basados en ELO vs mercado 1xBet • Análisis profesional offline">
+    <meta name="theme-color" content="#0a0e14">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../pictures/logo.png">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/pronosticos.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="../manifest.json">
+</head>
+<body class="pro-circuit-dark page-pronosticos">
+    
+    <!-- HEADER -->
+    <header class="header header-pronosticos">
+        <div class="header-content">
+            <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <a href="../index.html" class="logo-link" aria-label="Ir al inicio">
+                <img src="../pictures/logo.png" alt="CourtSight" class="logo-img" width="36" height="36" loading="lazy">
+                <h1 class="logo-text">COURTSIGHT <span class="logo-pro">PRO</span></h1>
+            </a>
+            <div id="connection-status" class="connection-status" role="status" aria-live="polite">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span class="status-text">Offline</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Overlay móvil -->
+    <div id="sidebar-overlay" class="sidebar-overlay" aria-hidden="true"></div>
+    
+    <!-- LAYOUT PRINCIPAL -->
+    <div class="app-layout">
+        
+        <!-- SIDEBAR -->
+        <aside id="sidebar" class="sidebar" aria-label="Navegación principal">
+            <nav class="sidebar-menu" role="navigation">
+                <a href="../index.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-home"></i></span>
+                    <span>Inicio</span>
+                </a>
+                <a href="pronosticos.html" class="sidebar-item active" aria-current="page">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-binoculars"></i></span>
+                    <span>Pronósticos</span>
+                </a>
+                <a href="simulador.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-table-tennis"></i></span>
+                    <span>Simulador</span>
+                </a>
+                <a href="ranking-elo.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-chart-line"></i></span>
+                    <span>Ranking ELO</span>
+                </a>
+                <a href="ranking-atp.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-trophy"></i></span>
+                    <span>Ranking ATP</span>
+                </a>
+                <a href="biblioteca.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-book"></i></span>
+                    <span>Biblioteca</span>
+                </a>
+                <a href="estadisticas.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-chart-pie"></i></span>
+                    <span>Estadísticas</span>
+                </a>
+                <a href="soporte.html" class="sidebar-item">
+                    <span class="icon" aria-hidden="true"><i class="fas fa-headset"></i></span>
+                    <span>Soporte</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-status">
+                    <span class="status-indicator online" aria-hidden="true"></span>
+                    <span class="status-label">Sesión activa</span>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="main-content main-pronosticos" role="main">
+            
+            <!-- SELECTOR DE FECHA PREMIUM -->
+            <div class="date-selector-wrapper">
+                <div class="date-pill" role="group" aria-label="Navegación por fecha">
+                    <button id="btn-prev" class="date-nav" aria-label="Día anterior">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <button id="btn-date" class="date-display" aria-haspopup="dialog" aria-expanded="false">
+                        <span id="date-icon" class="date-icon" aria-hidden="true"><i class="fas fa-calendar-day"></i></span>
+                        <span id="date-text" class="date-value">HOY</span>
+                        <i class="fas fa-chevron-down date-arrow" aria-hidden="true"></i>
+                    </button>
+                    <button id="btn-next" class="date-nav" aria-label="Día siguiente">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="date-hint" aria-hidden="true">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Toca para ver calendario</span>
+                </div>
+            </div>
+
+            <!-- CALENDARIO MODAL -->
+            <div id="calendar-modal" class="calendar-modal hidden" role="dialog" aria-modal="true" aria-labelledby="cal-title">
+                <div class="calendar-overlay" tabindex="-1"></div>
+                <div class="calendar-card">
+                    <div class="calendar-header">
+                        <button id="cal-prev" class="cal-nav-btn" aria-label="Mes anterior"><i class="fas fa-chevron-left"></i></button>
+                        <h3 id="cal-title" class="cal-title"></h3>
+                        <button id="cal-next" class="cal-nav-btn" aria-label="Mes siguiente"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-weekdays" role="row" aria-label="Días de la semana">
+                        <span role="columnheader">L</span><span role="columnheader">M</span><span role="columnheader">X</span>
+                        <span role="columnheader">J</span><span role="columnheader">V</span><span role="columnheader">S</span><span role="columnheader">D</span>
+                    </div>
+                    <div id="calendar-grid" class="calendar-grid" role="grid" aria-label="Calendario"></div>
+                    <div class="calendar-actions">
+                        <button id="cal-today" class="cal-today-btn"><i class="fas fa-bullseye"></i> Hoy</button>
+                        <button id="cal-close" class="cal-close-btn"><i class="fas fa-times"></i> Cerrar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ESTADO: CARGANDO -->
+            <div id="loading-state" class="state-container state-loading" aria-live="polite">
+                <div class="loading-spinner" aria-hidden="true">
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                </div>
+                <p class="loading-text">Analizando partidos...</p>
+                <div class="loading-skeleton" aria-hidden="true">
+                    <div class="skeleton-tournament"></div>
+                    <div class="skeleton-match"></div>
+                    <div class="skeleton-match"></div>
+                    <div class="skeleton-match"></div>
+                </div>
+            </div>
+
+            <!-- ESTADO: VACÍO -->
+            <div id="empty-state" class="state-container state-empty hidden" role="alert">
+                <div class="empty-icon" aria-hidden="true"><i class="fas fa-calendar-xmark"></i></div>
+                <h3 class="empty-title">Sin partidos</h3>
+                <p class="empty-desc">No hay pronósticos disponibles para esta fecha</p>
+                <button id="empty-back-today" class="btn-ghost">
+                    <i class="fas fa-bullseye"></i> Ver hoy
+                </button>
+            </div>
+
+            <!-- LISTA DE PARTIDOS AGRUPADOS POR TORNEO -->
+            <div id="tournaments-container" class="tournaments-container" aria-live="polite"></div>
+            
+        </main>
+    </div>
+    
+    <!-- MODAL DETALLE DE PARTIDO -->
+    <div id="detail-modal" class="detail-modal hidden" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+        <div class="modal-backdrop" tabindex="-1"></div>
+        <div class="modal-content">
+            <button class="modal-close-btn" id="detail-close" aria-label="Cerrar detalle">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            
+            <!-- Header del modal -->
+            <div class="detail-header">
+                <span id="detail-tournament" class="detail-badge badge-tournament">
+                    <i class="fas fa-trophy" aria-hidden="true"></i>
+                    <span class="badge-text"></span>
+                </span>
+                <span id="detail-surface" class="detail-badge badge-surface">
+                    <i class="fas fa-circle" aria-hidden="true"></i>
+                    <span class="badge-text"></span>
+                </span>
+                <span id="detail-status" class="detail-badge badge-status">
+                    <span class="badge-text"></span>
+                </span>
+            </div>
+
+            <!-- Jugadores -->
+            <div class="players-showcase">
+                <div class="player-col player-a">
+                    <img id="detail-flag-a" class="flag-lg" src="" alt="" width="64" height="64" loading="lazy">
+                    <h3 id="detail-name-a" class="name-lg"></h3>
+                    <span id="detail-elo-a" class="player-elo" aria-label="ELO del jugador"></span>
+                </div>
+                <div class="vs-badge">
+                    <span class="vs-text">VS</span>
+                    <span id="detail-date" class="vs-date" aria-label="Fecha y hora"></span>
+                </div>
+                <div class="player-col player-b">
+                    <img id="detail-flag-b" class="flag-lg" src="" alt="" width="64" height="64" loading="lazy">
+                    <h3 id="detail-name-b" class="name-lg"></h3>
+                    <span id="detail-elo-b" class="player-elo" aria-label="ELO del jugador"></span>
+                </div>
+            </div>
+
+            <!-- Comparativa ELO vs Mercado -->
+            <div class="comparison-grid">
+                <div class="comparison-card comparison-elo">
+                    <div class="comparison-header">
+                        <i class="fas fa-brain" aria-hidden="true"></i>
+                        <span class="comparison-label">Modelo ELO</span>
+                    </div>
+                    <div class="comparison-body">
+                        <div class="comparison-row">
+                            <span class="comparison-key">Favorito</span>
+                            <strong id="elo-fav" class="comparison-value mono"></strong>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-key">Cuota</span>
+                            <strong id="elo-odds" class="comparison-value mono"></strong>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-key">Probabilidad</span>
+                            <strong id="elo-prob" class="comparison-value mono"></strong>
+                        </div>
+                    </div>
+                    <div class="comparison-bar">
+                        <div id="elo-bar-fill" class="comparison-bar-fill" style="width: 0%" aria-hidden="true"></div>
+                    </div>
+                </div>
+                
+                <div class="comparison-card comparison-market">
+                    <div class="comparison-header">
+                        <i class="fas fa-coins" aria-hidden="true"></i>
+                        <span class="comparison-label">Mercado 1xBet</span>
+                    </div>
+                    <div class="comparison-body">
+                        <div class="comparison-row">
+                            <span class="comparison-key">Favorito</span>
+                            <strong id="mkt-fav" class="comparison-value mono"></strong>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-key">Cuota</span>
+                            <strong id="mkt-odds" class="comparison-value mono"></strong>
+                        </div>
+                        <div class="comparison-row">
+                            <span class="comparison-key">Probabilidad</span>
+                            <strong id="mkt-prob" class="comparison-value mono"></strong>
+                        </div>
+                    </div>
+                    <div class="comparison-bar">
+                        <div id="mkt-bar-fill" class="comparison-bar-fill" style="width: 0%" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diferencial de valor -->
+            <div class="value-differential">
+                <span class="diff-label">Diferencial</span>
+                <span id="value-diff" class="diff-value mono">0.00</span>
+                <span class="diff-hint" aria-hidden="true">ELO - Mercado</span>
+            </div>
+
+            <!-- Escenario de apuesta -->
+            <div id="detail-scenario" class="scenario-pill" role="status">
+                <i class="scenario-icon" aria-hidden="true"></i>
+                <span class="scenario-text"></span>
+            </div>
+
+            <!-- Recomendación -->
+            <div class="recommendation-block">
+                <i class="fas fa-bullseye recommendation-icon" aria-hidden="true"></i>
+                <div class="recommendation-content">
+                    <span class="recommendation-label">Recomendación</span>
+                    <strong id="detail-rec" class="recommendation-text"></strong>
+                </div>
+            </div>
+
+            <!-- Análisis -->
+            <div class="analysis-block">
+                <div class="analysis-header">
+                    <i class="fas fa-comment-alt" aria-hidden="true"></i>
+                    <span class="analysis-title">Análisis CourtSight</span>
+                </div>
+                <p id="detail-analysis" class="analysis-text"></p>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="disclaimer" role="note">
+                <i class="fas fa-shield-halved" aria-hidden="true"></i>
+                <span>Herramienta de análisis estadístico. Los pronósticos no garantizan resultados. Juega con responsabilidad.</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="info-bar footer-pronosticos">
+        <p class="info-text">CourtSight Tennis <span class="version-badge">v1.0.0</span></p>
+        <a href="https://t.me/CourtSight" class="telegram-contact" target="_blank" rel="noopener noreferrer">
+            <span class="telegram-icon"><i class="fab fa-telegram-plane" aria-hidden="true"></i></span>
+            <span>Únete al canal</span>
+        </a>
+        <p class="version-text">100% Offline • Sin límites</p>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="../js/app.js"></script>
+    <script src="../js/pronosticos.js"></script>
+</body>
+</html>
