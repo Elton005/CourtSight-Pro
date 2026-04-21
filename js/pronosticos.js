@@ -283,8 +283,17 @@ function renderTournaments() {
 // --- RENDERIZAR TARJETA DE PARTIDO ---
 function renderMatchCard(m) {
     let bgClass = '';
+    
+    // Estado: Acierto/Fallo (prioridad máxima)
     if (m.predictionCorrect === true) bgClass = 'correct';
     else if (m.predictionCorrect === false) bgClass = 'incorrect';
+    
+    // 🔹 NUEVO: Tipo de pronóstico (solo si no es correcto/incorrecto)
+    const recType = m.betting_recommendation?.type;
+    if (recType && !bgClass) {
+        // Solo añadir clase de pronóstico si no hay estado de resultado
+        bgClass += ` prediction-${recType}`;
+    }
     
     let setsHtml = '';
     if (m.result && m.result.sets && m.result.sets.length > 0) {
@@ -311,7 +320,7 @@ function renderMatchCard(m) {
     let winnerB = m.result?.winner === m.playerB.name ? 'winner' : '';
     
     return `
-    <div class="match-card ${bgClass}" data-id="${m.id}">
+    <div class="match-card ${bgClass.trim()}" data-id="${m.id}">
         ${timeHtml}
         <div class="match-players">
             <div class="player-row ${winnerA}">
