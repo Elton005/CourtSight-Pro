@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v2.3-offline-fix';
+const CACHE_VERSION = 'v2.4-offline-fix';
 const STATIC_CACHE = `static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`;
 
