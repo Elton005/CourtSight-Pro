@@ -1,0 +1,24 @@
+[
+  {
+    "id": "filosofia-market-first",
+    "title": "La Casa de Apuestas como Fuente de Información",
+    "category": "Metodología",
+    "difficulty": "advanced",
+    "excerpt": "En CourtSight no intentamos vencer a la casa; usamos su propia infraestructura para detectar información que la estadística convencional ignora.",
+    "content": "🧠 El Mito del 'Apostador vs. La Casa'\n\nEl error fatal del principiante es creer que la casa de apuestas se equivoca por descuido. En Tennis Picks Cuba, partimos de una premisa distinta: la casa de apuestas tiene la mejor red de información del planeta (lesiones de último minuto, estado anímico, fatiga en entrenamientos).\n\n🔍 CourtSight como Radar de Anomalías\n\nNuestro modelo ELO procesa miles de partidos para darnos el 'Rendimiento Teórico'. Pero el mercado nos da la 'Realidad Inmediata'. Cuando ambos chocan, ocurre la magia:\n\n- El Escenario de Inversión: Si CourtSight dice que un jugador debería ser favorito (cuota 1.30) pero la casa lo pone a 1.90, no pensamos que la casa cometió un error. Pensamos: '¿Qué sabe la casa que los números no ven?'.\n\n📉 Siguiendo el Dinero Inteligente\n\nEn lugar de apostar ciegamente al favorito estadístico, nos alineamos con el movimiento del mercado. Si la casa retira su confianza de un jugador, nosotros también. CourtSight nos sirve para confirmar que esa anomalía existe, y nuestra capa humana decide cómo aprovecharla. No buscamos tener la razón, buscamos tener rentabilidad.",
+    "readTime": 5,
+    "updatedAt": "2026-04-21",
+    "author": "CourtSight Tennis"
+},
+{
+    "id": "gestion-stake-dinamico",
+    "title": "Stake Dinámico: Protegiendo el Capital",
+    "category": "Gestión de Riesgo",
+    "difficulty": "intermediate",
+    "excerpt": "No todas las señales de CourtSight tienen el mismo peso. Aprende a diferenciar cuándo atacar con fuerza y cuándo protegerse con hándicaps.",
+    "content": "🛡️ La Ciencia del Stake en CourtSight\n\nEl éxito a largo plazo no depende de cuántos partidos ganas, sino de cuánto dinero pierdes cuando fallas. Nuestra gestión de Stake se divide según la claridad de la señal del mercado.\n\n✅ Nivel 1: Validación de Mercado (Stake 3 - 5)\nSe da cuando nuestro ELO y la cuota de la casa coinciden plenamente. \n- Confianza: Alta.\n- Estrategia: Inversión agresiva. Aquí buscamos maximizar la ganancia porque no hay 'ruido' ni señales de advertencia en el mercado.\n\n⚠️ Nivel 2: Discrepancia o Inversión (Stake 1 - 2)\nSe da cuando la casa desafía nuestro ELO. Es una señal de 'Alarma'.\n- Confianza: Cautelosa.\n- Estrategia: Protección total. Aunque seguimos la dirección de la casa, reducimos el Stake al mínimo porque aceptamos que existe incertidumbre (posible lesión o baja forma).\n\n🎯 La Herramienta Maestra: El Hándicap (+)\n\nEn las inversiones de mercado, rara vez buscamos la victoria directa. Preferimos usar el bank para 'comprar seguridad'. \n- Ejemplo: En lugar de apostar a que el jugador B gana, usamos un Hándicap de +2.5 o +3.5 juegos. \n\nEsto nos permite ganar la apuesta incluso si el jugador pierde el partido de forma ajustada. Es la forma definitiva de gestionar la incertidumbre: menos riesgo, mayor probabilidad de éxito.",
+    "readTime": 6,
+    "updatedAt": "2026-04-21",
+    "author": "CourtSight Tennis"
+}
+]
