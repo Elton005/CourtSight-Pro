@@ -1,7 +1,7 @@
 /* ============================================
 COURT SIGHT TENNIS - ESTADÍSTICAS JS v1.0
 📊 Cálculo de Yield, WinRate, ROI + Gráficos Canvas
-💰 Parámetros: Bank 2000€, Validaciones 200€, Inversiones/Discrepancias 100€ @1.45
+💰 Parámetros: Bank 2000€, Validaciones 200€, Inversiones/Discrepancias 100€ @1.50
 ✅ Offline-first: gráficos con Canvas nativo (sin dependencias)
 ============================================ */
 
@@ -14,7 +14,7 @@ const STATS_CONFIG = {
     STAKE_VALIDACION: 200,
     STAKE_INVERSION: 100,
     STAKE_DISCREPANCIA: 100,
-    ODDS_DISCREPANCIA: 1.45, // Cuota fija para discrepancias
+    ODDS_DISCREPANCIA: 1.50, // Cuota fija para discrepancias
     
     // Fuentes de datos
     PRONOSTICOS_URL: '../data/pronosticos.json',
@@ -410,7 +410,7 @@ function renderSummaryTable() {
             name: 'Discrepancias', 
             key: 'discrepancia', 
             color: 'var(--scenario-discrepancia)',
-            stakeLabel: '100€ @1.45'
+            stakeLabel: '100€ @1.50'
         }
     ];
     

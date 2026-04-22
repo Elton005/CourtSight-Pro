@@ -111,15 +111,15 @@
             <!-- PESTAÑAS DE NAVEGACIÓN -->
             <div class="sim-tabs-wrapper">
                 <div class="sim-tabs" role="tablist" aria-label="Modos de simulación">
-                    <button class="sim-tab active" id="tab-live" role="tab" aria-selected="true" aria-controls="panel-live" data-target="panel-live">
+                    <button class="sim-tab" id="tab-live" role="tab" aria-selected="false" aria-controls="panel-live" data-target="panel-live">
                         <i class="fas fa-bolt" aria-hidden="true"></i>
                         <span>Simulación Live</span>
-                        <span class="tab-status">v0.9 beta</span>
+                        <span class="tab-status">Próximamente</span>
                     </button>
-                    <button class="sim-tab" id="tab-custom" role="tab" aria-selected="false" aria-controls="panel-custom" data-target="panel-custom">
+                    <button class="sim-tab active" id="tab-custom" role="tab" aria-selected="true" aria-controls="panel-custom" data-target="panel-custom">
                         <i class="fas fa-sliders" aria-hidden="true"></i>
                         <span>Simulación Personalizada</span>
-                        <span class="tab-status">v0.9 beta</span>
+                        <span class="tab-status">Disponible</span>
                     </button>
                 </div>
             </div>
@@ -127,8 +127,8 @@
             <!-- PANELES DE CONTENIDO -->
             <div class="sim-panels">
                 
-                <!-- 🔹 PANEL 1: SIMULACIÓN LIVE -->
-                <div id="panel-live" class="sim-panel active" role="tabpanel" aria-labelledby="tab-live">
+                <!-- 🔹 PANEL 1: SIMULACIÓN LIVE (Placeholder) -->
+                <div id="panel-live" class="sim-panel" role="tabpanel" aria-labelledby="tab-live" hidden>
                     <div class="dev-module-card">
                         <div class="dev-card-glow"></div>
                         <div class="dev-card-content">
@@ -150,7 +150,7 @@
                                 <li><i class="fas fa-check-circle"></i> Inyección de datos de partido activo</li>
                                 <li><i class="fas fa-check-circle"></i> Algoritmo de ajuste de cuotas por momentum</li>
                                 <li><i class="fas fa-check-circle"></i> Comparativa ELO vs Mercado en vivo</li>
-                                <li><i class="fas fa-check-circle"></i> Basado en las metricas de presion de los jugadores</li>
+                                <li><i class="fas fa-check-circle"></i> Basado en las métricas de presión de los jugadores</li>
                             </ul>
                             
                             <div class="dev-actions">
@@ -163,45 +163,458 @@
                     </div>
                 </div>
 
-                <!-- 🔹 PANEL 2: SIMULACIÓN PERSONALIZADA -->
-                <div id="panel-custom" class="sim-panel" role="tabpanel" aria-labelledby="tab-custom" hidden>
-                    <div class="dev-module-card">
-                        <div class="dev-card-glow custom-glow"></div>
-                        <div class="dev-card-content">
-                            <div class="dev-header">
-                                <div class="dev-icon custom-icon"><i class="fas fa-microscope"></i></div>
-                                <div class="dev-badge custom-badge">
-                                    <span class="pulse-dot"></span>
-                                    En desarrollo
+                <!-- 🔹 PANEL 2: SIMULACIÓN PERSONALIZADA (Integrado) -->
+                <div id="panel-custom" class="sim-panel active" role="tabpanel" aria-labelledby="tab-custom">
+                    
+                    <!-- 🔹 SELECTOR DE CIRCUITO -->
+                    <div class="circuit-selector">
+                        <label><i class="fas fa-trophy"></i> Circuito</label>
+                        <div class="circuit-options" role="radiogroup" aria-label="Seleccionar circuito">
+                            <label class="circuit-option active" data-circuit="atp" tabindex="0" role="radio" aria-checked="true">
+                                <input type="radio" name="circuit" value="atp" checked hidden>
+                                <img src="../pictures/atp-logo.jpg" alt="ATP Tour" class="circuit-logo" onerror="this.src='../pictures/logo.png'">
+                                <span>ATP Tour</span>
+                            </label>
+                            <label class="circuit-option" data-circuit="challenger" tabindex="0" role="radio" aria-checked="false">
+                                <input type="radio" name="circuit" value="challenger" hidden>
+                                <img src="../pictures/challenger-logo.jpg" alt="ATP Challenger" class="circuit-logo" onerror="this.src='../pictures/logo.png'">
+                                <span>ATP Challenger</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Loading -->
+                    <div id="loading" class="loading-state">
+                        <div class="spinner"><i class="fas fa-circle-notch fa-spin"></i></div>
+                        <p>Cargando jugadores...</p>
+                    </div>
+                    
+                    <!-- Formulario -->
+                    <div id="simulate-form" class="simulate-container hidden">
+                        <div class="players-grid">
+                            <div class="player-section" data-player="1">
+                                <label for="player1-search"><i class="fas fa-user"></i> Jugador 1</label>
+                                <div class="search-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" id="player1-search" class="search-input" placeholder="Buscar jugador..." autocomplete="off">
+                                </div>
+                                <div id="player1-suggestions" class="suggestions-list hidden" role="listbox"></div>
+                                <div id="player1-selected" class="selected-player hidden">
+                                    <img src="" alt="" class="selected-flag" aria-hidden="true">
+                                    <div class="selected-info">
+                                        <span class="selected-name"></span>
+                                        <span class="selected-elo"></span>
+                                    </div>
+                                    <div class="player-actions">
+                                        <button class="btn-adjust" data-player="1" aria-label="Ajustar contexto Jugador 1"><i class="fas fa-sliders-h"></i></button>
+                                        <button class="remove-player" data-player="1" aria-label="Remover jugador 1"><i class="fas fa-times"></i></button>
+                                    </div>
                                 </div>
                             </div>
                             
-                            <h3 class="dev-title">Laboratorio Challenger</h3>
-                            <p class="dev-desc">
-                                Configura tus propios escenarios: selecciona jugadores ATP/Challenger, asigna ELO manual, elige superficie y genera pronósticos bajo tus propias reglas de riesgo. 
-                                Esta es tu herramienta para probar estrategias sin depender de datos externos.
-                            </p>
+                            <div class="vs-divider">VS</div>
                             
-                            <ul class="dev-features">
-                                <li><i class="fas fa-check-circle"></i> Constructor de emparejamientos libre</li>
-                                <li><i class="fas fa-check-circle"></i> Ajuste manual de ELO y forma reciente</li>
-                                <li><i class="fas fa-check-circle"></i> Simulación de 10,000 iteraciones </li>
-                                <li><i class="fas fa-check-circle"></i> Especial para elaborar pronosticos propios</li>
-                            </ul>
-                            
-                            <div class="dev-actions">
-                                <button class="btn-ghost" disabled aria-label="Función no disponible aún">
-                                    <i class="fas fa-plus"></i> Crear escenario
-                                </button>
-                                <span class="dev-note"><i class="fas fa-info-circle"></i> Disponible en la próxima actualización mayor</span>
+                            <div class="player-section" data-player="2">
+                                <label for="player2-search"><i class="fas fa-user"></i> Jugador 2</label>
+                                <div class="search-box">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" id="player2-search" class="search-input" placeholder="Buscar jugador..." autocomplete="off">
+                                </div>
+                                <div id="player2-suggestions" class="suggestions-list hidden" role="listbox"></div>
+                                <div id="player2-selected" class="selected-player hidden">
+                                    <img src="" alt="" class="selected-flag" aria-hidden="true">
+                                    <div class="selected-info">
+                                        <span class="selected-name"></span>
+                                        <span class="selected-elo"></span>
+                                    </div>
+                                    <div class="player-actions">
+                                        <button class="btn-adjust" data-player="2" aria-label="Ajustar contexto Jugador 2"><i class="fas fa-sliders-h"></i></button>
+                                        <button class="remove-player" data-player="2" aria-label="Remover jugador 2"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        
+                        <div class="form-section">
+                            <label for="surface-select"><i class="fas fa-layer-group"></i> Superficie</label>
+                            <select id="surface-select" class="form-select">
+                                <option value="hardOut">🟦 Dura Outdoor</option>
+                                <option value="hardIndoor">🟪 Dura Indoor</option>
+                                <option value="clay">🟧 Arcilla</option>
+                                <option value="grass">🟩 Hierba</option>
+                            </select>
+                        </div>
 
+                        <!-- Cuotas obligatorias -->
+                        <div class="form-section">
+                            <label><i class="fas fa-coins"></i> Cuotas de Mercado (Obligatorio)</label>
+                            <div class="odds-fixed-house">
+                                <div class="house-header">
+                                    <span class="house-name-fixed">1xBet</span>
+                                </div>
+                                <div class="odds-row">
+                                    <div class="odds-input-wrapper">
+                                        <span class="odds-label">J1:</span>
+                                        <input type="number" id="house1-odds1" class="form-odds" placeholder="1.85" step="0.01" min="1" required>
+                                    </div>
+                                    <div class="odds-input-wrapper">
+                                        <span class="odds-label">J2:</span>
+                                        <input type="number" id="house1-odds2" class="form-odds" placeholder="2.05" step="0.01" min="1" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="odds-hint"><i class="fas fa-info-circle"></i> Las cuotas son necesarias para calcular valor esperado</p>
+                        </div>
+                        
+                        <button id="btn-simulate" class="btn-simulate" disabled title="Selecciona ambos jugadores y cuotas para continuar">
+                            <i class="fas fa-rocket"></i> Simular 10,000 Partidos
+                        </button>
+                        <div id="error-msg" class="error-msg hidden" role="alert" aria-live="polite"></div>
+                    </div>
+                    
+                    <!-- Simulando -->
+                    <div id="simulating" class="simulating-state hidden">
+                        <div class="spinner-large"><i class="fas fa-circle-notch fa-spin"></i></div>
+                        <p>Simulando 10,000 partidos...</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                <div id="progress-fill" class="progress-fill"></div>
+                            </div>
+                            <span id="progress-text" class="progress-text">0%</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Resultados -->
+                    <div id="results" class="results-container hidden">
+                        
+                        <div class="results-header">
+                            <h3 class="results-title">
+                                <i class="fas fa-chart-pie"></i> 
+                                <span>Simulación ELO</span>
+                                <span class="results-badge" id="results-circuit-badge">ATP</span>
+                            </h3>
+                            <button id="btn-new" class="btn-new-sim">
+                                <i class="fas fa-redo"></i> Nueva Simulación
+                            </button>
+                        </div>
+                    
+                        <!-- 🔹 MATCHUP CARDS REFINADAS -->
+                        <div class="matchup-container">
+                            
+                            <!-- Jugador 1 -->
+                            <div class="player-card player-card-1" id="player-card-1">
+                                <div class="card-header">
+                                    <div class="player-badge">
+                                        <img id="player1-flag" class="player-flag-lg" src="" alt="" width="64" height="64" loading="lazy">
+                                        <div class="player-info">
+                                            <h4 class="player-name-lg" id="player1-name"></h4>
+                                            <span class="player-elo-display" id="player1-elo-display">ELO: —</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-type-badge card-type-badge-1">
+                                        <i class="fas fa-brain"></i>
+                                        <span>MODELO</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <div class="prob-display prob-display-1">
+                                        <div class="prob-value-wrapper">
+                                            <span class="prob-number prob-number-1" id="player1-prob">—</span>
+                                            <span class="prob-symbol">%</span>
+                                        </div>
+                                        <span class="prob-label">PROBABILIDAD</span>
+                                    </div>
+                                    
+                                    <div class="prob-bar-container">
+                                        <div class="prob-bar-bg">
+                                            <div class="prob-bar-fill prob-bar-fill-1" id="player1-prob-bar" style="width: 0%"></div>
+                                        </div>
+                                        <div class="prob-bar-labels">
+                                            <span>0%</span>
+                                            <span>50%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-footer">
+                                    <div class="odds-display">
+                                        <span class="odds-label-sm">CUOTA MODELO</span>
+                                        <span class="odds-value-lg odds-value-1" id="player1-odds">—</span>
+                                    </div>
+                                    <div class="favorite-indicator" id="player1-favorite">
+                                        <i class="fas fa-crown"></i>
+                                        <span>FAVORITO</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- VS Divider Premium -->
+                            <div class="vs-divider-premium">
+                                <div class="vs-line vs-line-left"></div>
+                                <div class="vs-badge-premium">
+                                    <span class="vs-text-premium">VS</span>
+                                </div>
+                                <div class="vs-line vs-line-right"></div>
+                            </div>
+                    
+                            <!-- Jugador 2 -->
+                            <div class="player-card player-card-2" id="player-card-2">
+                                <div class="card-header">
+                                    <div class="player-badge">
+                                        <img id="player2-flag" class="player-flag-lg" src="" alt="" width="64" height="64" loading="lazy">
+                                        <div class="player-info">
+                                            <h4 class="player-name-lg" id="player2-name"></h4>
+                                            <span class="player-elo-display" id="player2-elo-display">ELO: —</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-type-badge card-type-badge-2">
+                                        <i class="fas fa-brain"></i>
+                                        <span>MODELO</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-body">
+                                    <div class="prob-display prob-display-2">
+                                        <div class="prob-value-wrapper">
+                                            <span class="prob-number prob-number-2" id="player2-prob">—</span>
+                                            <span class="prob-symbol">%</span>
+                                        </div>
+                                        <span class="prob-label">PROBABILIDAD</span>
+                                    </div>
+                                    
+                                    <div class="prob-bar-container">
+                                        <div class="prob-bar-bg">
+                                            <div class="prob-bar-fill prob-bar-fill-2" id="player2-prob-bar" style="width: 0%"></div>
+                                        </div>
+                                        <div class="prob-bar-labels">
+                                            <span>0%</span>
+                                            <span>50%</span>
+                                            <span>100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card-footer">
+                                    <div class="odds-display">
+                                        <span class="odds-label-sm">CUOTA MODELO</span>
+                                        <span class="odds-value-lg odds-value-2" id="player2-odds">—</span>
+                                    </div>
+                                    <div class="favorite-indicator" id="player2-favorite">
+                                        <i class="fas fa-crown"></i>
+                                        <span>FAVORITO</span>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                        <!-- 🔹 STATS GRID REFINADO -->
+                        <div class="stats-grid-premium">
+                            <div class="stat-card-premium">
+                                <div class="stat-icon-premium">
+                                    <i class="fas fa-signal"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label-premium">Diferencia ELO</span>
+                                    <span class="stat-value-premium stat-elo-diff" id="stat-elo-diff">—</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card-premium">
+                                <div class="stat-icon-premium">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label-premium">Confianza</span>
+                                    <span class="stat-value-premium stat-confidence" id="stat-confidence">—</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card-premium">
+                                <div class="stat-icon-premium">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label-premium">Superficie</span>
+                                    <span class="stat-value-premium stat-surface" id="stat-surface">—</span>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card-premium">
+                                <div class="stat-icon-premium">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-label-premium">Hora</span>
+                                    <span class="stat-value-premium stat-time" id="stat-time">—</span>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <!-- 🔹 RECOMENDACIÓN PREMIUM (Simplificada) -->
+                        <div class="recommendation-premium" id="recommendation-premium">
+                            <!-- Header con tipo de recomendación -->
+                            <div class="rec-header">
+                                <div class="rec-type-badge" id="rec-type-badge">
+                                    <i class="rec-icon fas fa-pause-circle" id="rec-icon"></i>
+                                    <span id="rec-type-label">—</span>
+                                </div>
+                                <div class="rec-ratio-display">
+                                    <span class="ratio-label">Ratio</span>
+                                    <span class="ratio-value mono" id="rec-ratio">—</span>
+                                </div>
+                            </div>
+                    
+                            <!-- Barra de ratio visual -->
+                            <div class="ratio-visualizer">
+                                <div class="ratio-scale">
+                                    <span class="scale-mark low" data-value="0.85">0.85</span>
+                                    <span class="scale-mark mid" data-value="1.00">1.00</span>
+                                    <span class="scale-mark high" data-value="1.25">1.25</span>
+                                    <span class="scale-mark extreme" data-value="1.50">1.50+</span>
+                                </div>
+                                <div class="ratio-track">
+                                    <div class="ratio-zones">
+                                        <div class="zone validacion" style="width: 15%"></div>
+                                        <div class="zone neutro" style="width: 25%"></div>
+                                        <div class="zone discrepancia" style="width: 25%"></div>
+                                        <div class="zone inversion" style="width: 35%"></div>
+                                    </div>
+                                    <div class="ratio-marker" id="ratio-marker" style="left: 50%">
+                                        <div class="marker-dot"></div>
+                                        <div class="marker-label" id="marker-label">1.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Contenido principal -->
+                            <div class="rec-content">
+                                <div class="rec-main">
+                                    <h4 class="rec-title" id="rec-title">Esperando simulación...</h4>
+                                    <p class="rec-description" id="rec-description">
+                                        Ingresa jugadores, superficie y cuotas para generar una recomendación basada en el ratio mercado/ELO.
+                                    </p>
+                                </div>
+
+                                <!-- Encabezado de Pronóstico -->
+                                <div class="pronostico-header">
+                                    <i class="fas fa-bullseye"></i>
+                                    <span>PRONÓSTICO</span>
+                                </div>
+                    
+                                <!-- Detalles simplificados -->
+                                <div class="rec-details-simple" id="rec-details-simple">
+                                    <div class="simple-detail-row">
+                                        <span class="simple-detail-label">Selección</span>
+                                        <span class="simple-detail-value" id="rec-pick-simple">—</span>
+                                    </div>
+                                    <div class="simple-detail-row">
+                                        <span class="simple-detail-label">Pronóstico</span>
+                                        <span class="simple-detail-value bet-text" id="rec-bet-text-simple">—</span>
+                                    </div>
+                                </div>
+                    
+                                <!-- Explicación contextual -->
+                                <div class="rec-explanation" id="rec-explanation">
+                                    <i class="fas fa-lightbulb explanation-icon"></i>
+                                    <p id="rec-explanation-text">La recomendación se basa en la diferencia entre la probabilidad implícita del mercado y nuestro modelo ELO.</p>
+                                </div>
+                            </div>
+                    
+                            <!-- Footer -->
+                            <div class="rec-footer">
+                                <button class="btn-copy-rec" id="btn-copy-rec" disabled>
+                                    <i class="fas fa-copy"></i> Copiar recomendación
+                                </button>
+                                <span class="rec-disclaimer"><i class="fas fa-shield-halved"></i> Herramienta de análisis • Juega con responsabilidad</span>
+                            </div>
+                        </div>
+                    
+                        <!-- 🔹 HISTORIAL SIMPLE -->
+                        <div id="history-section" class="history-section">
+                            <h4 class="history-title"><i class="fas fa-history"></i> Últimas Simulaciones</h4>
+                            <div id="history-list" class="history-list"></div>
+                        </div>
+                    </div>
+                    
             </div>
             
         </main>
+    </div>
+    
+    <!-- PANEL DE AJUSTES (Bottom Sheet) -->
+    <div id="adjust-panel" class="bottom-sheet hidden" data-adjusting-player="">
+        <div class="sheet-header">
+            <div class="sheet-handle"></div>
+            <h3>🎯 Ajustar Contexto: <span id="adjust-player-name">Jugador</span></h3>
+            <button class="btn-close" type="button" aria-label="Cerrar panel">&times;</button>
+        </div>
+    
+        <div class="sheet-content">
+            <div class="adjust-section">
+                <h4>📊 Forma Reciente (60%)</h4>
+                <div class="form-section">
+                    <label>Últimos 5 partidos</label>
+                    <div class="radio-group" role="radiogroup">
+                        <label><input type="radio" name="form-5matches" value="5" checked> <span>5 victorias</span></label>
+                        <label><input type="radio" name="form-5matches" value="3"> <span>4V, 1D</span></label>
+                        <label><input type="radio" name="form-5matches" value="1"> <span>3V, 2D</span></label>
+                        <label><input type="radio" name="form-5matches" value="-1"> <span>2V, 3D</span></label>
+                        <label><input type="radio" name="form-5matches" value="-3"> <span>1V, 4D</span></label>
+                        <label><input type="radio" name="form-5matches" value="-5"> <span>5 derrotas</span></label>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label>Calidad de victorias</label>
+                    <div class="radio-group" role="radiogroup">
+                        <label><input type="radio" name="form-quality" value="3" checked> <span>Cómodas</span></label>
+                        <label><input type="radio" name="form-quality" value="1"> <span>Mixtas</span></label>
+                        <label><input type="radio" name="form-quality" value="0"> <span>Ajustadas</span></label>
+                        <label><input type="radio" name="form-quality" value="-2"> <span>No aplica</span></label>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label>Nivel de rivales</label>
+                    <div class="radio-group" role="radiogroup">
+                        <label><input type="radio" name="form-rivals" value="4" checked> <span>Top 10 ATP</span></label>
+                        <label><input type="radio" name="form-rivals" value="3"> <span>Top 20 ATP</span></label>
+                        <label><input type="radio" name="form-rivals" value="1"> <span>Top 50 ATP</span></label>
+                        <label><input type="radio" name="form-rivals" value="0"> <span>Top 100 ATP</span></label>
+                        <label><input type="radio" name="form-rivals" value="-2"> <span>Fuera de Top 100</span></label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="adjust-section">
+                <h4>🏆 Contexto del Torneo (40%)</h4>
+                <div class="form-section">
+                    <label>Participación año pasado</label>
+                    <div class="radio-group" role="radiogroup">
+                        <label><input type="radio" name="context-participation" value="10" checked> <span>Campeón </span></label>
+                        <label><input type="radio" name="context-participation" value="7"> <span>Semifinales</span></label>
+                        <label><input type="radio" name="context-participation" value="4"> <span>Cuartos </span></label>
+                        <label><input type="radio" name="context-participation" value="2"> <span>Rondas previas </span></label>
+                        <label><input type="radio" name="context-participation" value="-1"> <span>No participó / 1R </span></label>
+                        <label><input type="radio" name="context-participation" value="-4"> <span>Lesionado/Retirado </span></label>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <label>Mejor resultado histórico</label>
+                    <div class="radio-group" role="radiogroup">
+                        <label><input type="radio" name="context-best" value="8" checked> <span>Campeón</span></label>
+                        <label><input type="radio" name="context-best" value="6"> <span>Finalista</span></label>
+                        <label><input type="radio" name="context-best" value="4"> <span>Semifinales</span></label>
+                        <label><input type="radio" name="context-best" value="2"> <span>Cuartos de final</span></label>
+                        <label><input type="radio" name="context-best" value="-3"> <span>Nunca pasó 2R</span></label>
+                        <label><input type="radio" name="context-best" value="-5"> <span>Primera vez que juega</span></label>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="btn-apply-adjustments" class="btn-primary">✓ Aplicar Ajustes</button>
+        </div>
     </div>
     
     <!-- FOOTER -->
