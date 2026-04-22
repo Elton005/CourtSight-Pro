@@ -2433,8 +2433,8 @@
    }
   },
   {
-   "id": "aguilar-d",
-   "atpPoints": 0,
+   "id": "merida-d",
+   "atpPoints": 432,
    "elo": {
     "grass": 0,
     "hardOut": 1804,
@@ -3000,16 +3000,6 @@
     "hardOut": 1523,
     "hardIndoor": 1514,
     "clay": 1641
-   }
-  },
-  {
-   "id": "dedura-palomero-d",
-   "atpPoints": 0,
-   "elo": {
-    "grass": 0,
-    "hardOut": 1492,
-    "hardIndoor": 1513,
-    "clay": 1668
    }
   },
   {
@@ -17116,11 +17106,11 @@
    "id": "dedura-d",
    "atpPoints": 176,
    "elo": {
-    "grass": 0,
-    "hardOut": 0,
-    "hardIndoor": 0,
-    "clay": 0
-   }
+     "grass": 0,
+     "hardOut": 1492,
+     "hardIndoor": 1513,
+     "clay": 1668
+    }
   },
   {
    "id": "delgadillo-a",
@@ -17375,16 +17365,6 @@
   {
    "id": "meerschen-m",
    "atpPoints": 37,
-   "elo": {
-    "grass": 0,
-    "hardOut": 0,
-    "hardIndoor": 0,
-    "clay": 0
-   }
-  },
-  {
-   "id": "merida-d",
-   "atpPoints": 432,
    "elo": {
     "grass": 0,
     "hardOut": 0,

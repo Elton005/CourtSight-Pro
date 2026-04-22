@@ -10756,7 +10756,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Jenson Brooksby",
       "flagCode": "us"
@@ -10786,7 +10786,20 @@
       "ratio": "1.08",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.39) y la valoración institucional (1.50) para Emilio Nava. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del estadounidense en la capital española, reconociendo su mayor ritmo competitivo actual frente a un Jenson Brooksby que busca recuperar su nivel tras periodos de inactividad. Al registrarse un ratio de 1.08, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la frescura de Nava, evaluando si su movilidad logra imponerse al juego táctico de Brooksby bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.39) y la valoración institucional (1.50) para Emilio Nava. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del estadounidense en la capital española, reconociendo su mayor ritmo competitivo actual frente a un Jenson Brooksby que busca recuperar su nivel tras periodos de inactividad. Al registrarse un ratio de 1.08, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la frescura de Nava, evaluando si su movilidad logra imponerse al juego táctico de Brooksby bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Emilio Nava",
+      "sets": [
+        {
+          "a": 6,
+          "b": 3
+        },
+        {
+          "a": 7,
+          "b": 5
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776793724450",
@@ -10794,7 +10807,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Zhizhen Zhang",
       "flagCode": "cn"
@@ -10824,7 +10837,21 @@
       "ratio": "1.71",
       "betText": "handicap +2.5 para Zhizhen Zhang"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Discrepancia Fuerte: mientras que el modelo ELO otorga un favoritismo extremo a Vit Kopriva (1.10), la institución ofrece una cuota de 1.88, lo que indica una clara falta de confianza del mercado en la superioridad estadística teórica del checo. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para Zhizhen Zhang ha sido subestimado drásticamente por el algoritmo, posiblemente debido a que el mercado pondera su potente servicio y su exitoso historial previo en la altitud de la capital española por encima de los datos históricos de ELO.Al registrarse un ratio de 1.71, nos encontramos ante una anomalía significativa donde el precio no refleja la probabilidad teórica, abriendo una ventana de oportunidad técnica de alto impacto. Por tanto, la recomendación es aprovechar esta ineficiencia mediante un Handicap +2.5, protegiendo la posición ante la competitividad del tenista chino, cuyo juego agresivo se ve maximizado por el aire ligero de la Caja Mágica. Se sugiere mantener una postura humilde ante la efectividad de los modelos en este escenario, observando si la capacidad de aceleración de Zhang logra neutralizar la solidez de Kopriva en un entorno que favorece la paridad."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Discrepancia Fuerte: mientras que el modelo ELO otorga un favoritismo extremo a Vit Kopriva (1.10), la institución ofrece una cuota de 1.88, lo que indica una clara falta de confianza del mercado en la superioridad estadística teórica del checo. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para Zhizhen Zhang ha sido subestimado drásticamente por el algoritmo, posiblemente debido a que el mercado pondera su potente servicio y su exitoso historial previo en la altitud de la capital española por encima de los datos históricos de ELO.Al registrarse un ratio de 1.71, nos encontramos ante una anomalía significativa donde el precio no refleja la probabilidad teórica, abriendo una ventana de oportunidad técnica de alto impacto. Por tanto, la recomendación es aprovechar esta ineficiencia mediante un Handicap +2.5, protegiendo la posición ante la competitividad del tenista chino, cuyo juego agresivo se ve maximizado por el aire ligero de la Caja Mágica. Se sugiere mantener una postura humilde ante la efectividad de los modelos en este escenario, observando si la capacidad de aceleración de Zhang logra neutralizar la solidez de Kopriva en un entorno que favorece la paridad.",
+    "result": {
+      "winner": "Vit Kopriva",
+      "sets": [
+        {
+          "a": 6,
+          "b": 2
+        },
+        {
+          "a": 6,
+          "b": 0
+        }
+      ]
+    },
+    "predictionCorrect": false
   },
   {
     "id": "sim-1776793789254",
@@ -10832,7 +10859,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Zizou Bergs",
       "flagCode": "be"
@@ -10862,7 +10889,24 @@
       "ratio": "1.10",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.71) y la valoración institucional (1.88) para Zizou Bergs. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del belga en la capital española, reconociendo su mayor rodaje competitivo actual frente a la jerarquía histórica, pero condicionada por la inactividad, de Marin Cilic. Al registrarse un ratio de 1.10, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la frescura de Bergs, evaluando si su dinamismo logra imponerse a la experiencia del croata bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.71) y la valoración institucional (1.88) para Zizou Bergs. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del belga en la capital española, reconociendo su mayor rodaje competitivo actual frente a la jerarquía histórica, pero condicionada por la inactividad, de Marin Cilic. Al registrarse un ratio de 1.10, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la frescura de Bergs, evaluando si su dinamismo logra imponerse a la experiencia del croata bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Marin Cilic",
+      "sets": [
+        {
+          "a": 4,
+          "b": 6
+        },
+        {
+          "a": 6,
+          "b": 3
+        },
+        {
+          "a": 6,
+          "b": 4
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776793828052",
@@ -10870,7 +10914,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Damir Dzumhur",
       "flagCode": "ba"
@@ -10900,7 +10944,21 @@
       "ratio": "1.50",
       "betText": "victoria de Mattia Bellucci"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado de alto impacto técnico: mientras que el modelo ELO otorga un favoritismo contundente a Damir Dzumhur (1.21), la institución gira la narrativa al posicionar a Mattia Bellucci como el favorito real con una cuota de 1.81. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el italiano es superior en las condiciones de altitud de la capital, donde el mercado parece valorar su frescura y capacidad de generación de potencia frente a la ventaja estadística teórica del bosnio. Al registrarse un ratio de 1.50 que valida el movimiento de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Mattia Bellucci. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si la agresividad del joven zurdo logra imponerse al oficio de Dzumhur bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado de alto impacto técnico: mientras que el modelo ELO otorga un favoritismo contundente a Damir Dzumhur (1.21), la institución gira la narrativa al posicionar a Mattia Bellucci como el favorito real con una cuota de 1.81. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el italiano es superior en las condiciones de altitud de la capital, donde el mercado parece valorar su frescura y capacidad de generación de potencia frente a la ventaja estadística teórica del bosnio. Al registrarse un ratio de 1.50 que valida el movimiento de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Mattia Bellucci. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si la agresividad del joven zurdo logra imponerse al oficio de Dzumhur bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Damir Dzumhur",
+      "sets": [
+        {
+          "a": 6,
+          "b": 2
+        },
+        {
+          "a": 6,
+          "b": 4
+        }
+      ]
+    },
+    "predictionCorrect": false
   },
   {
     "id": "sim-1776811103546",
@@ -10908,7 +10966,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Dino Prizmic",
       "flagCode": "hr"
@@ -10937,7 +10995,20 @@
       "ratio": "1.00",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación prácticamente absoluta entre la proyección del modelo ELO (1.67) y la valoración institucional (1.67) para Matteo Berrettini. Esta configuración técnica indica la ausencia de una Anomalía o discrepancia en el precio, confirmando que la institución ha tasado con total precisión las probabilidades del italiano en su debut en la capital española. El mercado reconoce la peligrosidad de Dino Prizmic —un joven talento con gran proyección en tierra batida y campeón junior de Roland Garros— pero le otorga a Berrettini el favoritismo debido a su mayor jerarquía y su reciente nivel mostrado en torneos previos como Montecarlo, donde demostró que su servicio y derecha siguen siendo armas letales en estas condiciones.Al registrarse un ratio de 1.00, la detección de valor es inexistente bajo nuestra metodología, clasificando el evento como neutro debido a que el mercado absorbe con total eficiencia el Nivel de Rendimiento esperado del favorito. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la exactitud de un mercado que descuenta la experiencia de Berrettini en escenarios de nivel Masters 1000, evaluando si la frescura física del croata logra forzar un desenlace más ajustado bajo el aire ligero característico de la Caja Mágica sin ofrecer una ventaja clara para la inversión."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación prácticamente absoluta entre la proyección del modelo ELO (1.67) y la valoración institucional (1.67) para Matteo Berrettini. Esta configuración técnica indica la ausencia de una Anomalía o discrepancia en el precio, confirmando que la institución ha tasado con total precisión las probabilidades del italiano en su debut en la capital española. El mercado reconoce la peligrosidad de Dino Prizmic —un joven talento con gran proyección en tierra batida y campeón junior de Roland Garros— pero le otorga a Berrettini el favoritismo debido a su mayor jerarquía y su reciente nivel mostrado en torneos previos como Montecarlo, donde demostró que su servicio y derecha siguen siendo armas letales en estas condiciones.Al registrarse un ratio de 1.00, la detección de valor es inexistente bajo nuestra metodología, clasificando el evento como neutro debido a que el mercado absorbe con total eficiencia el Nivel de Rendimiento esperado del favorito. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la exactitud de un mercado que descuenta la experiencia de Berrettini en escenarios de nivel Masters 1000, evaluando si la frescura física del croata logra forzar un desenlace más ajustado bajo el aire ligero característico de la Caja Mágica sin ofrecer una ventaja clara para la inversión.",
+    "result": {
+      "winner": "Dino Prizmic",
+      "sets": [
+        {
+          "a": 6,
+          "b": 3
+        },
+        {
+          "a": 6,
+          "b": 4
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776793867055",
@@ -10945,7 +11016,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Ignacio Buse",
       "flagCode": "pe"
@@ -10975,7 +11046,20 @@
       "ratio": "0.99",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación prácticamente perfecta entre la proyección del modelo ELO (1.20) y la valoración institucional (1.19) para Ignacio Buse. Esta configuración técnica indica la ausencia de una Anomalía o discrepancia en el precio, confirmando que la institución ha tasado con alta precisión el favoritismo del peruano en la capital española, reconociendo su especialidad en la superficie frente a la conocida resistencia de Adrian Mannarino a la tierra batida. Al registrarse un ratio de 0.99, la detección de valor es inexistente bajo nuestra metodología, clasificando el evento como neutro debido a que el mercado absorbe con total eficiencia el Nivel de Rendimiento esperado del favorito. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la exactitud de un mercado que descuenta la ventaja técnica de Buse en arcilla, evaluando si su solidez logra confirmarse bajo el aire ligero característico de la Caja Mágica sin ofrecer una ventaja clara para la inversión."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación prácticamente perfecta entre la proyección del modelo ELO (1.20) y la valoración institucional (1.19) para Ignacio Buse. Esta configuración técnica indica la ausencia de una Anomalía o discrepancia en el precio, confirmando que la institución ha tasado con alta precisión el favoritismo del peruano en la capital española, reconociendo su especialidad en la superficie frente a la conocida resistencia de Adrian Mannarino a la tierra batida. Al registrarse un ratio de 0.99, la detección de valor es inexistente bajo nuestra metodología, clasificando el evento como neutro debido a que el mercado absorbe con total eficiencia el Nivel de Rendimiento esperado del favorito. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la exactitud de un mercado que descuenta la ventaja técnica de Buse en arcilla, evaluando si su solidez logra confirmarse bajo el aire ligero característico de la Caja Mágica sin ofrecer una ventaja clara para la inversión.",
+    "result": {
+      "winner": "Ignacio Buse",
+      "sets": [
+        {
+          "a": 6,
+          "b": 4
+        },
+        {
+          "a": 6,
+          "b": 2
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776793971078",
@@ -10983,7 +11067,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Alexandre Muller",
       "flagCode": "fr"
@@ -11013,7 +11097,20 @@
       "ratio": "1.23",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.43) y la valoración institucional (1.76) para Alexandre Muller. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del francés en la capital española, reconociendo su mayor rodaje competitivo en la gira de tierra batida frente a un Jan-Lennard Struff que, si bien es un especialista en estas condiciones de altitud, llega con menos ritmo de partidos en las últimas semanas. Al registrarse un ratio de 1.23, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solvencia de Muller, evaluando si su consistencia desde el fondo logra neutralizar el servicio y la agresividad del alemán bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.43) y la valoración institucional (1.76) para Alexandre Muller. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del francés en la capital española, reconociendo su mayor rodaje competitivo en la gira de tierra batida frente a un Jan-Lennard Struff que, si bien es un especialista en estas condiciones de altitud, llega con menos ritmo de partidos en las últimas semanas. Al registrarse un ratio de 1.23, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solvencia de Muller, evaluando si su consistencia desde el fondo logra neutralizar el servicio y la agresividad del alemán bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Jan-Lennard Struff",
+      "sets": [
+        {
+          "a": 7,
+          "b": 6
+        },
+        {
+          "a": 6,
+          "b": 0
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776811301017",
@@ -11021,7 +11118,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Lorenzo Sonego",
       "flagCode": "it"
@@ -11050,7 +11147,20 @@
       "ratio": "1.23",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.43) y la valoración institucional (1.76) para Dusan Lajovic. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del serbio en la capital española, reconociendo su especialidad en la superficie y su reciente inercia positiva en la gira europea frente a la combatividad de Lorenzo Sonego.Al registrarse un ratio de 1.23, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Lajovic desde el fondo, evaluando si el servicio y la intensidad del italiano logran equilibrar el duelo bajo el aire ligero característico de la Caja Mágica sin que esto represente una oportunidad clara de inversión."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.43) y la valoración institucional (1.76) para Dusan Lajovic. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del serbio en la capital española, reconociendo su especialidad en la superficie y su reciente inercia positiva en la gira europea frente a la combatividad de Lorenzo Sonego.Al registrarse un ratio de 1.23, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Lajovic desde el fondo, evaluando si el servicio y la intensidad del italiano logran equilibrar el duelo bajo el aire ligero característico de la Caja Mágica sin que esto represente una oportunidad clara de inversión.",
+    "result": {
+      "winner": "Dusan Lajovic",
+      "sets": [
+        {
+          "a": 6,
+          "b": 3
+        },
+        {
+          "a": 7,
+          "b": 6
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776794009442",
@@ -11058,7 +11168,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Roberto Bautista Agut",
       "flagCode": "es"
@@ -11088,7 +11198,20 @@
       "ratio": "1.09",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.38) y la valoración institucional (1.50) para Thiago Agustín Tirante. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del argentino en la capital española, reconociendo su mayor frescura física y adaptación actual a la superficie frente a la veteranía de Roberto Bautista Agut. Al registrarse un ratio de 1.09, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Tirante, evaluando si el tenis de control del español logra contrarrestar la potencia del joven argentino bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.38) y la valoración institucional (1.50) para Thiago Agustín Tirante. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del argentino en la capital española, reconociendo su mayor frescura física y adaptación actual a la superficie frente a la veteranía de Roberto Bautista Agut. Al registrarse un ratio de 1.09, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Tirante, evaluando si el tenis de control del español logra contrarrestar la potencia del joven argentino bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Thiago Agustin Tirante",
+      "sets": [
+        {
+          "a": 6,
+          "b": 2
+        },
+        {
+          "a": 6,
+          "b": 4
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776811425569",
@@ -11096,7 +11219,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Elmer Moller",
       "flagCode": "dk"
@@ -11125,7 +11248,20 @@
       "ratio": "1.09",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.48) y la valoración institucional (1.62) para Elmer Moller. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del danés en la capital española, reconociendo su mayor rodaje en el circuito Challenger de tierra batida y su ascenso al Top 170 del ranking ATP frente a la juventud del italiano Federico Cina.Al registrarse un ratio de 1.09, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Moller desde el fondo de la pista, evaluando si el talento emergente de Cina logra adaptarse con éxito al aire ligero característico de la Caja Mágica sin que esto represente una oportunidad clara de inversión."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.48) y la valoración institucional (1.62) para Elmer Moller. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del danés en la capital española, reconociendo su mayor rodaje en el circuito Challenger de tierra batida y su ascenso al Top 170 del ranking ATP frente a la juventud del italiano Federico Cina.Al registrarse un ratio de 1.09, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Moller desde el fondo de la pista, evaluando si el talento emergente de Cina logra adaptarse con éxito al aire ligero característico de la Caja Mágica sin que esto represente una oportunidad clara de inversión.",
+    "result": {
+      "winner": "Elmer Moller",
+      "sets": [
+        {
+          "a": 6,
+          "b": 4
+        },
+        {
+          "a": 7,
+          "b": 6
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776811554833",
@@ -11133,7 +11269,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Nikoloz Basilashvili",
       "flagCode": "ge"
@@ -11162,7 +11298,20 @@
       "ratio": "1.15",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.39) y la valoración institucional (1.60) para Sebastian Ofner. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del austriaco en la capital española, reconociendo su mayor regularidad competitiva frente a la potencia, a menudo errática, de Nikoloz Basilashvili.Al registrarse un ratio de 1.15, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Ofner en esta superficie, evaluando si la agresividad del georgiano logra encontrar la precisión necesaria bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.39) y la valoración institucional (1.60) para Sebastian Ofner. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del austriaco en la capital española, reconociendo su mayor regularidad competitiva frente a la potencia, a menudo errática, de Nikoloz Basilashvili.Al registrarse un ratio de 1.15, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Ofner en esta superficie, evaluando si la agresividad del georgiano logra encontrar la precisión necesaria bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Sebastian Ofner",
+      "sets": [
+        {
+          "a": 7,
+          "b": 6
+        },
+        {
+          "a": 7,
+          "b": 6
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776794045624",
@@ -11170,7 +11319,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Tomas Machac",
       "flagCode": "cz"
@@ -11200,7 +11349,25 @@
       "ratio": "0.80",
       "betText": "victoria de Tomas Machac"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado técnica: mientras que el modelo ELO otorga el favoritismo teórico a Francisco Comesaña (1.87), la institución gira la narrativa al posicionar a Tomas Machac como el favorito real con una cuota de 1.50. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el checo es superior en las condiciones de altitud de la capital, donde el mercado parece valorar su polivalencia y su capacidad de juego rápido frente a la especialización en tierra batida del argentino. Al registrarse un ratio de 0.80 que valida el movimiento agresivo de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Tomas Machac. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si la intensidad de Machac logra imponerse a la solidez de Comesaña bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado técnica: mientras que el modelo ELO otorga el favoritismo teórico a Francisco Comesaña (1.87), la institución gira la narrativa al posicionar a Tomas Machac como el favorito real con una cuota de 1.50. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el checo es superior en las condiciones de altitud de la capital, donde el mercado parece valorar su polivalencia y su capacidad de juego rápido frente a la especialización en tierra batida del argentino. Al registrarse un ratio de 0.80 que valida el movimiento agresivo de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Tomas Machac. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si la intensidad de Machac logra imponerse a la solidez de Comesaña bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Tomas Machac",
+      "sets": [
+        {
+          "a": 3,
+          "b": 6
+        },
+        {
+          "a": 7,
+          "b": 6
+        },
+        {
+          "a": 6,
+          "b": 3
+        }
+      ]
+    },
+    "predictionCorrect": true
   },
   {
     "id": "sim-1776811697218",
@@ -11208,7 +11375,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Jaime Faria",
       "flagCode": "pt"
@@ -11237,7 +11404,20 @@
       "ratio": "0.97",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación técnica sólida entre la proyección del modelo ELO (1.48) y la valoración institucional (1.43) para Hubert Hurkacz. Esta configuración indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del polaco en la capital española, reconociendo su jerarquía como Top 10 y su reciente título en Estoril frente al ímpetu del joven portugués Jaime Faria.Al registrarse un ratio de 0.97, la detección de valor es inexistente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe con total eficiencia el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la precisión de un mercado que descuenta la solvencia del servicio de Hurkacz en las condiciones de altitud de la Caja Mágica, evaluando si Faria logra mantener la competitividad mostrada en la fase previa bajo el aire ligero de Madrid sin que esto represente una oportunidad clara de inversión."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación técnica sólida entre la proyección del modelo ELO (1.48) y la valoración institucional (1.43) para Hubert Hurkacz. Esta configuración indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del polaco en la capital española, reconociendo su jerarquía como Top 10 y su reciente título en Estoril frente al ímpetu del joven portugués Jaime Faria.Al registrarse un ratio de 0.97, la detección de valor es inexistente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe con total eficiencia el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la precisión de un mercado que descuenta la solvencia del servicio de Hurkacz en las condiciones de altitud de la Caja Mágica, evaluando si Faria logra mantener la competitividad mostrada en la fase previa bajo el aire ligero de Madrid sin que esto represente una oportunidad clara de inversión.",
+    "result": {
+      "winner": "Hubert Hurkacz",
+      "sets": [
+        {
+          "a": 6,
+          "b": 3
+        },
+        {
+          "a": 6,
+          "b": 3
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776794081369",
@@ -11245,7 +11425,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Alejandro Tabilo",
       "flagCode": "cl"
@@ -11275,7 +11455,20 @@
       "ratio": "1.09",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.28) y la valoración institucional (1.40) para Alejandro Tabilo. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del chileno en la capital española, reconociendo su solidez y jerarquía en esta superficie frente a la combatividad de Valentin Royer. Al registrarse un ratio de 1.09, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solvencia de Tabilo, evaluando si su zurda y su adaptación a la altitud logran imponerse al empuje del francés bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.28) y la valoración institucional (1.40) para Alejandro Tabilo. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del chileno en la capital española, reconociendo su solidez y jerarquía en esta superficie frente a la combatividad de Valentin Royer. Al registrarse un ratio de 1.09, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solvencia de Tabilo, evaluando si su zurda y su adaptación a la altitud logran imponerse al empuje del francés bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Alejandro Tabilo",
+      "sets": [
+        {
+          "a": 6,
+          "b": 2
+        },
+        {
+          "a": 6,
+          "b": 4
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776811812282",
@@ -11283,7 +11476,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Benjamin Bonzi",
       "flagCode": "fr"
@@ -11312,7 +11505,24 @@
       "ratio": "1.08",
       "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.55) y la valoración institucional (1.68) para Titouan Droguet. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del francés en la capital española, reconociendo su mayor rodaje actual en la superficie frente a la búsqueda de ritmo competitivo de Benjamin Bonzi.Al registrarse un ratio de 1.08, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Droguet desde el fondo, evaluando si la experiencia de Bonzi logra equilibrar el duelo bajo el aire ligero característico de la Caja Mágica sin que esto represente una oportunidad clara de inversión."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una alineación coherente entre la proyección del modelo ELO (1.55) y la valoración institucional (1.68) para Titouan Droguet. Esta configuración técnica indica la ausencia de una Anomalía significativa, confirmando que la institución ha tasado con precisión el favoritismo del francés en la capital española, reconociendo su mayor rodaje actual en la superficie frente a la búsqueda de ritmo competitivo de Benjamin Bonzi.Al registrarse un ratio de 1.08, la detección de valor es insuficiente bajo nuestra metodología para comprometer una posición de riesgo, clasificando el evento como neutro debido a que el precio absorbe correctamente el Nivel de Rendimiento esperado del favorito sin ofrecer una ventaja estadística clara. La postura profesional sugiere mantener la observación externa y una perspectiva humilde ante la eficiencia de un mercado que descuenta la solidez de Droguet desde el fondo, evaluando si la experiencia de Bonzi logra equilibrar el duelo bajo el aire ligero característico de la Caja Mágica sin que esto represente una oportunidad clara de inversión.",
+    "result": {
+      "winner": "Benjamin Bonzi",
+      "sets": [
+        {
+          "a": 6,
+          "b": 7
+        },
+        {
+          "a": 7,
+          "b": 6
+        },
+        {
+          "a": 6,
+          "b": 4
+        }
+      ]
+    }
   },
   {
     "id": "sim-1776794162880",
@@ -11320,7 +11530,7 @@
     "startTime": "15:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
-    "status": "upcoming",
+    "status": "finished",
     "playerA": {
       "name": "Rafael Jodar",
       "flagCode": "es"
@@ -11350,50 +11560,524 @@
       "ratio": "0.76",
       "betText": "victoria de Rafael Jodar"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado de alto impacto técnico: mientras que el modelo ELO otorga el favoritismo teórico a Jesper de Jong (1.62), la institución gira la narrativa al posicionar a Rafael Jodar como el favorito real con una cuota de 1.23. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el joven español es significativamente superior en las condiciones de altitud de la capital, donde el mercado parece respaldar su espectacular inercia tras ganar recientemente el título en Marrakech y alcanzar las semifinales en el Conde de Godó, situándose ya en el Top 50 del ranking ATP.Al registrarse un ratio de 0.76 que valida el movimiento agresivo de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Rafael Jodar. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si la frescura y el momento de forma del \"nuevo Rafa\" logran imponerse a la mayor experiencia de De Jong bajo el aire ligero característico de la Caja Mágica."
+    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado de alto impacto técnico: mientras que el modelo ELO otorga el favoritismo teórico a Jesper de Jong (1.62), la institución gira la narrativa al posicionar a Rafael Jodar como el favorito real con una cuota de 1.23. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el joven español es significativamente superior en las condiciones de altitud de la capital, donde el mercado parece respaldar su espectacular inercia tras ganar recientemente el título en Marrakech y alcanzar las semifinales en el Conde de Godó, situándose ya en el Top 50 del ranking ATP.Al registrarse un ratio de 0.76 que valida el movimiento agresivo de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Rafael Jodar. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si la frescura y el momento de forma del \"nuevo Rafa\" logran imponerse a la mayor experiencia de De Jong bajo el aire ligero característico de la Caja Mágica.",
+    "result": {
+      "winner": "Rafael Jodar",
+      "sets": [
+        {
+          "a": 2,
+          "b": 6
+        },
+        {
+          "a": 7,
+          "b": 5
+        },
+        {
+          "a": 6,
+          "b": 4
+        }
+      ]
+    },
+    "predictionCorrect": true
   },
-   {
-    "id": "sim-1776794196505",
+  {
+    "id": "sim-1776895794659",
     "date": "2026-04-23",
-    "startTime": "15:00",
+    "startTime": "05:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
     "status": "upcoming",
     "playerA": {
-      "name": "Botic van de Zandschulp",
-      "flagCode": "nl"
+      "name": "Cristian Garin",
+      "flagCode": "cl"
     },
     "playerB": {
       "name": "Alexander Blockx",
       "flagCode": "be"
     },
     "elo": {
-      "favorite": "Botic van de Zandschulp",
-      "odds": 1.62,
-      "probability": 59.9
+      "favorite": "Cristian Garin",
+      "odds": 1.53,
+      "probability": 63.3
     },
     "market": {
       "source": "1xBet",
       "favorite": "Alexander Blockx",
-      "odds": 1.71,
-      "probability": 58.5
+      "odds": 1.5,
+      "probability": 66.7
     },
-    "__archivo__": "pronostico-sim-1776794196505.json",
+    "__archivo__": "pronostico-sim-1776895794659.json",
     "betting_recommendation": {
       "type": "inversion",
       "label": "INVERSIÓN DE MERCADO",
       "bet": "moneyline",
       "pick": "Alexander Blockx",
       "line": null,
-      "ratio": "1.06",
+      "ratio": "0.98",
       "betText": "victoria de Alexander Blockx"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado de alto interés técnico: mientras que el modelo ELO otorga el favoritismo teórico a Botic van de Zandschulp (1.62), la institución gira drásticamente la narrativa al posicionar a Alexander Blockx como el favorito real con una cuota de 1.71. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el joven belga es superior en las condiciones de altitud de la capital, donde el mercado parece respaldar su proyección ascendente y su reciente capacidad para competir contra rivales de jerarquía en la gira europea, frente a la irregularidad mostrada por el neerlandés en superficies lentas. Al registrarse un ratio de 1.06 que valida el movimiento de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Alexander Blockx, manteniendo una postura humilde ante la efectividad de la lectura del mercado y observando si la frescura del talento belga logra imponerse bajo el aire ligero característico de la Caja Mágica."
+    "analysis": ""
   },
   {
-    "id": "sim-1776794241282",
+    "id": "sim-1776895843243",
     "date": "2026-04-23",
-    "startTime": "15:00",
+    "startTime": "05:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Pablo Carreno Busta",
+      "flagCode": "es"
+    },
+    "playerB": {
+      "name": "Marton Fucsovics",
+      "flagCode": "hu"
+    },
+    "elo": {
+      "favorite": "Pablo Carreno Busta",
+      "odds": 1.77,
+      "probability": 54.7
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Pablo Carreno Busta",
+      "odds": 1.85,
+      "probability": 54.1
+    },
+    "__archivo__": "pronostico-sim-1776895843243.json",
+    "betting_recommendation": {
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
+      "line": null,
+      "ratio": "1.05",
+      "betText": "Neutro: Sin factores externos influyendo"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776895875611",
+    "date": "2026-04-23",
+    "startTime": "05:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Yannick Hanfmann",
+      "flagCode": "de"
+    },
+    "playerB": {
+      "name": "Marcos Giron",
+      "flagCode": "us"
+    },
+    "elo": {
+      "favorite": "Yannick Hanfmann",
+      "odds": 1.34,
+      "probability": 72.6
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Yannick Hanfmann",
+      "odds": 1.35,
+      "probability": 74.1
+    },
+    "__archivo__": "pronostico-sim-1776895875611.json",
+    "betting_recommendation": {
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
+      "line": null,
+      "ratio": "1.01",
+      "betText": "Neutro: Sin factores externos influyendo"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776895933426",
+    "date": "2026-04-23",
+    "startTime": "05:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Terence Atmane",
+      "flagCode": "fr"
+    },
+    "playerB": {
+      "name": "Miomir Kecmanovic",
+      "flagCode": "rs"
+    },
+    "elo": {
+      "favorite": "Miomir Kecmanovic",
+      "odds": 1.9,
+      "probability": 51.1
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Miomir Kecmanovic",
+      "odds": 1.71,
+      "probability": 58.5
+    },
+    "__archivo__": "pronostico-sim-1776895933426.json",
+    "betting_recommendation": {
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
+      "line": null,
+      "ratio": "0.90",
+      "betText": "Neutro: Sin factores externos influyendo"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776895982571",
+    "date": "2026-04-23",
+    "startTime": "06:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Alexei Popyrin",
+      "flagCode": "au"
+    },
+    "playerB": {
+      "name": "Martin Damm",
+      "flagCode": "us"
+    },
+    "elo": {
+      "favorite": "Alexei Popyrin",
+      "odds": 1.17,
+      "probability": 82.6
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Alexei Popyrin",
+      "odds": 1.5,
+      "probability": 66.7
+    },
+    "__archivo__": "pronostico-sim-1776895982571.json",
+    "betting_recommendation": {
+      "type": "discrepancia",
+      "label": "DISCREPANCIA",
+      "bet": "handicap",
+      "pick": "N/A",
+      "line": "+3.5",
+      "ratio": "1.28",
+      "betText": "handicap +3.5 para Martin Damm"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896019194",
+    "date": "2026-04-23",
+    "startTime": "06:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Fabian Marozsan",
+      "flagCode": "hu"
+    },
+    "playerB": {
+      "name": "Ethan Quinn",
+      "flagCode": "us"
+    },
+    "elo": {
+      "favorite": "Fabian Marozsan",
+      "odds": 1.92,
+      "probability": 50.6
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Fabian Marozsan",
+      "odds": 1.76,
+      "probability": 56.8
+    },
+    "__archivo__": "pronostico-sim-1776896019194.json",
+    "betting_recommendation": {
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
+      "line": null,
+      "ratio": "0.92",
+      "betText": "Neutro: Sin factores externos influyendo"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896054178",
+    "date": "2026-04-23",
+    "startTime": "06:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Jaume Munar",
+      "flagCode": "es"
+    },
+    "playerB": {
+      "name": "Alexander Shevchenko",
+      "flagCode": "kz"
+    },
+    "elo": {
+      "favorite": "Alexander Shevchenko",
+      "odds": 1.61,
+      "probability": 60.4
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Jaume Munar",
+      "odds": 1.61,
+      "probability": 62.1
+    },
+    "__archivo__": "pronostico-sim-1776896054178.json",
+    "betting_recommendation": {
+      "type": "inversion",
+      "label": "INVERSIÓN DE MERCADO",
+      "bet": "moneyline",
+      "pick": "Jaume Munar",
+      "line": null,
+      "ratio": "1.00",
+      "betText": "victoria de Jaume Munar"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896099915",
+    "date": "2026-04-23",
+    "startTime": "06:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Nuno Borges",
+      "flagCode": "pt"
+    },
+    "playerB": {
+      "name": "Mariano Navone",
+      "flagCode": "ar"
+    },
+    "elo": {
+      "favorite": "Mariano Navone",
+      "odds": 1.34,
+      "probability": 72.3
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Mariano Navone",
+      "odds": 1.55,
+      "probability": 64.5
+    },
+    "__archivo__": "pronostico-sim-1776896099915.json",
+    "betting_recommendation": {
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
+      "line": null,
+      "ratio": "1.16",
+      "betText": "Neutro: Sin factores externos influyendo"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896141163",
+    "date": "2026-04-23",
+    "startTime": "08:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Adolfo Daniel Vallejo",
+      "flagCode": "py"
+    },
+    "playerB": {
+      "name": "Grigor Dimitrov",
+      "flagCode": "bg"
+    },
+    "elo": {
+      "favorite": "Adolfo Daniel Vallejo",
+      "odds": 1.49,
+      "probability": 65.1
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Adolfo Daniel Vallejo",
+      "odds": 1.9,
+      "probability": 52.6
+    },
+    "__archivo__": "pronostico-sim-1776896141163.json",
+    "betting_recommendation": {
+      "type": "discrepancia",
+      "label": "DISCREPANCIA",
+      "bet": "handicap",
+      "pick": "N/A",
+      "line": "+3.5",
+      "ratio": "1.28",
+      "betText": "handicap +3.5 para Grigor Dimitrov"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896187410",
+    "date": "2026-04-23",
+    "startTime": "08:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Patrick Kypson",
+      "flagCode": "us"
+    },
+    "playerB": {
+      "name": "Stefanos Tsitsipas",
+      "flagCode": "gr"
+    },
+    "elo": {
+      "favorite": "Stefanos Tsitsipas",
+      "odds": 1.47,
+      "probability": 65.9
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Stefanos Tsitsipas",
+      "odds": 1.39,
+      "probability": 71.9
+    },
+    "__archivo__": "pronostico-sim-1776896187410.json",
+    "betting_recommendation": {
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
+      "line": null,
+      "ratio": "0.95",
+      "betText": "Neutro: Sin factores externos influyendo"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896233154",
+    "date": "2026-04-23",
+    "startTime": "08:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Vilius Gaubas",
+      "flagCode": "lt"
+    },
+    "playerB": {
+      "name": "Sebastian Baez",
+      "flagCode": "ar"
+    },
+    "elo": {
+      "favorite": "Vilius Gaubas",
+      "odds": 1.85,
+      "probability": 52.5
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Sebastian Baez",
+      "odds": 1.44,
+      "probability": 69.4
+    },
+    "__archivo__": "pronostico-sim-1776896233154.json",
+    "betting_recommendation": {
+      "type": "inversion",
+      "label": "INVERSIÓN DE MERCADO",
+      "bet": "moneyline",
+      "pick": "Sebastian Baez",
+      "line": null,
+      "ratio": "0.78",
+      "betText": "victoria de Sebastian Baez"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896280450",
+    "date": "2026-04-23",
+    "startTime": "08:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Daniel Altmaier",
+      "flagCode": "de"
+    },
+    "playerB": {
+      "name": "Juan Manuel Cerundolo",
+      "flagCode": "ar"
+    },
+    "elo": {
+      "favorite": "Juan Manuel Cerundolo",
+      "odds": 1.53,
+      "probability": 63.4
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Juan Manuel Cerundolo",
+      "odds": 1.7,
+      "probability": 58.8
+    },
+    "__archivo__": "pronostico-sim-1776896280450.json",
+    "betting_recommendation": {
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
+      "line": null,
+      "ratio": "1.11",
+      "betText": "Neutro: Sin factores externos influyendo"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896316786",
+    "date": "2026-04-23",
+    "startTime": "08:00",
+    "tournament": "ATP Madrid",
+    "surface": "Arcilla",
+    "status": "upcoming",
+    "playerA": {
+      "name": "Marco Trungelliti",
+      "flagCode": "ar"
+    },
+    "playerB": {
+      "name": "Daniel Merida Aguilar",
+      "flagCode": "es"
+    },
+    "elo": {
+      "favorite": "Marco Trungelliti",
+      "odds": 1.58,
+      "probability": 61.3
+    },
+    "market": {
+      "source": "1xBet",
+      "favorite": "Daniel Merida Aguilar",
+      "odds": 1.74,
+      "probability": 57.5
+    },
+    "__archivo__": "pronostico-sim-1776896316786.json",
+    "betting_recommendation": {
+      "type": "inversion",
+      "label": "INVERSIÓN DE MERCADO",
+      "bet": "moneyline",
+      "pick": "Daniel Merida Aguilar",
+      "line": null,
+      "ratio": "1.10",
+      "betText": "victoria de Daniel Merida Aguilar"
+    },
+    "analysis": ""
+  },
+  {
+    "id": "sim-1776896354626",
+    "date": "2026-04-23",
+    "startTime": "10:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
     "status": "upcoming",
@@ -11416,7 +12100,7 @@
       "odds": 1.61,
       "probability": 62.1
     },
-    "__archivo__": "pronostico-sim-1776794241282.json",
+    "__archivo__": "pronostico-sim-1776896354626.json",
     "betting_recommendation": {
       "type": "discrepancia",
       "label": "DISCREPANCIA",
@@ -11426,50 +12110,50 @@
       "ratio": "1.26",
       "betText": "handicap +3.5 para Gael Monfils"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Discrepancia técnica de especial relevancia: mientras que el modelo ELO otorga un favoritismo contundente a Camilo Ugo Carabelli (1.28), la institución ofrece una cuota de 1.61, señalando una resistencia del mercado a validar la superioridad estadística teórica del argentino. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para Gael Monfils ha sido subestimado por el algoritmo, posiblemente debido a que el mercado pondera la jerarquía histórica del francés y su capacidad para generar espectáculo en grandes escenarios por encima de la inercia actual de Carabelli.Al registrarse un ratio de 1.26, nos encontramos ante una ineficiencia donde el precio no refleja la probabilidad teórica, abriendo una ventana de oportunidad técnica. Por tanto, la recomendación es aprovechar esta diferencia mediante un Handicap +3.5, protegiendo la posición ante la competitividad de Monfils, quien a pesar de su ranking actual (200º), mantiene un servicio y una movilidad que pueden ser peligrosos en el aire ligero de la Caja Mágica. Se sugiere mantener una postura humilde ante la efectividad de los modelos en esta ronda de 128, observando si la solidez de Carabelli logra contener el carisma y la potencia del veterano galo en un entorno que favorece la paridad"
+    "analysis": ""
   },
   {
-    "id": "sim-1776794404128",
+    "id": "sim-1776896388682",
     "date": "2026-04-23",
-    "startTime": "15:00",
+    "startTime": "10:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
     "status": "upcoming",
     "playerA": {
-      "name": "Jaume Munar",
-      "flagCode": "es"
+      "name": "Nicolai Budkov Kjaer",
+      "flagCode": "no"
     },
     "playerB": {
-      "name": "Alexander Shevchenko",
-      "flagCode": "kz"
+      "name": "Reilly Opelka",
+      "flagCode": "us"
     },
     "elo": {
-      "favorite": "Alexander Shevchenko",
-      "odds": 1.61,
-      "probability": 60.4
+      "favorite": "Reilly Opelka",
+      "odds": 1.72,
+      "probability": 56.3
     },
     "market": {
       "source": "1xBet",
-      "favorite": "Jaume Munar",
-      "odds": 1.6,
-      "probability": 62.5
+      "favorite": "Reilly Opelka",
+      "odds": 1.8,
+      "probability": 55.6
     },
-    "__archivo__": "pronostico-sim-1776794404128.json",
+    "__archivo__": "pronostico-sim-1776896388682.json",
     "betting_recommendation": {
-      "type": "inversion",
-      "label": "INVERSIÓN DE MERCADO",
-      "bet": "moneyline",
-      "pick": "Jaume Munar",
+      "type": "neutro",
+      "label": "NEUTRO",
+      "bet": "espera",
+      "pick": null,
       "line": null,
-      "ratio": "0.99",
-      "betText": "victoria de Jaume Munar"
+      "ratio": "1.05",
+      "betText": "Neutro: Sin factores externos influyendo"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado técnica de especial interés: mientras que el modelo ELO otorga el favoritismo teórico a Alexander Shevchenko (1.61), la institución gira la narrativa al posicionar a Jaume Munar como el favorito real con una cuota de 1.60. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el español es superior en las condiciones de altitud de la capital, donde el mercado parece valorar su consistencia defensiva y su capacidad de lucha ante el público local por encima de la ventaja estadística teórica del kazajo.Al registrarse un ratio de 0.99 que valida el movimiento de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Jaume Munar. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si la solidez característica de Munar logra neutralizar los tiros planos de Shevchenko bajo el aire ligero característico de la Caja Mágica."
+    "analysis": ""
   },
   {
-    "id": "sim-1776794574980",
+    "id": "sim-1776896435442",
     "date": "2026-04-23",
-    "startTime": "15:00",
+    "startTime": "11:00",
     "tournament": "ATP Madrid",
     "surface": "Arcilla",
     "status": "upcoming",
@@ -11489,19 +12173,19 @@
     "market": {
       "source": "1xBet",
       "favorite": "Martin Landaluce",
-      "odds": 1.26,
-      "probability": 79.4
+      "odds": 1.23,
+      "probability": 81.3
     },
-    "__archivo__": "pronostico-sim-1776794574980.json",
+    "__archivo__": "pronostico-sim-1776896435442.json",
     "betting_recommendation": {
       "type": "inversion",
       "label": "INVERSIÓN DE MERCADO",
       "bet": "moneyline",
       "pick": "Martin Landaluce",
       "line": null,
-      "ratio": "0.66",
+      "ratio": "0.64",
       "betText": "victoria de Martin Landaluce"
     },
-    "analysis": "En las pistas de arcilla de Madrid, este enfrentamiento presenta una Inversión de Mercado de alto impacto técnico: mientras que el modelo ELO otorga el favoritismo teórico a Adam Walton (1.91), la institución gira drásticamente la narrativa al posicionar a Martin Landaluce como el favorito real con una cuota de 1.26. Esta acción institucional sugiere que el Nivel de Rendimiento esperado para el joven español es significativamente superior en las condiciones de altitud de la capital, donde el mercado parece respaldar su meteórica progresión tras irrumpir recientemente en el Top 100 del ranking ATP (No. 99).Al registrarse un ratio de 0.66 que valida el movimiento agresivo de la casa de apuestas hacia el lado no favorecido por el algoritmo, la detección de valor reside en seguir la fuerza de la cuota institucional; por tanto, la recomendación técnica es la victoria de Martin Landaluce. El mercado pondera la excelente adaptación de Landaluce a la altitud de la Caja Mágica y su gran estado de forma —viniendo de victorias de peso ante rivales de élite como Khachanov en Miami— frente a un Walton que históricamente ha mostrado menos solvencia en superficies de tierra batida. Se sugiere mantener una postura humilde ante la efectividad de la lectura del mercado, observando si el empuje del madrileño ante su público logra ratificar su condición de favorito."
+    "analysis": ""
   }
 ]
